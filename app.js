@@ -1,8 +1,6 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
-const cookieparser = require("cookie-parser");
-const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
 const episodesRoute = require("./routes/episodes");
@@ -14,7 +12,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cookieparser());
 
 // DB Connection
 const MONGO_URI = process.env.MONGO_URI;
