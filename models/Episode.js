@@ -5,7 +5,7 @@ const EpisodeSchema = new Schema({
         type: Schema.Types.String,
         required: true
     },
-    tvShowId: {
+    tvShow: {
         type: Schema.Types.ObjectId,
         required: true
     },
@@ -21,7 +21,7 @@ const EpisodeSchema = new Schema({
         type: Schema.Types.Date,
         required: true
     },
-    directorId: {
+    director: {
         type: Schema.Types.ObjectId,
         required: true,
         ref: "Director"

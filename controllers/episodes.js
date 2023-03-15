@@ -3,16 +3,13 @@ const {
   validateNumber,
   validateTime,
 } = require("../helpers/validateParams");
-const Director = require("../models/Director");
-const Episode = require("../models/Episode");
-const TVShow = require("../models/TVShow");
+const { Director, Episode, TVShow } = require("../models");
 
 async function getEpisode(id) {
   try {
-    const episode = await Episode.findById(id);
+    const episode = await Episode.findById(id).populate('director').populate('tvShow');
     if (!episode) throw new Error("Episode not found");
-    const director = await Director.findById(episode.directorId);
-    return { ...episode.toObject(), director };
+    return episode;
   } catch (err) {
     console.error(err);
     throw new Error(err.message);
