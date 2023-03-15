@@ -7,7 +7,8 @@ const EpisodeSchema = new Schema({
     },
     tvShow: {
         type: Schema.Types.ObjectId,
-        required: true
+        required: true,
+        ref: "TVShow"
     },
     season: {
         type: Schema.Types.Number,

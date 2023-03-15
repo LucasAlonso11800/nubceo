@@ -3,6 +3,7 @@ const router = express.Router();
 
 const { getEpisode, createEpisode } = require("../controllers/episodes");
 
+// Fetch specific episode
 router.get("/:id", async (req, res) => {
   const { id } = req.params;
   try {
@@ -13,6 +14,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+// Create episode
 router.post("/", async (req, res) => {
   const { title, tvShowId, season, length, date, directorId } = req.body;
   try {

@@ -2,6 +2,7 @@ const express = require("express");
 const { getMovies } = require("../controllers/movies");
 const router = express.Router();
 
+// Fetch all movies
 router.get("/", async (req, res) => {
   try {
     const { actors, director, genre, year, title, sort, asc } = req.query;

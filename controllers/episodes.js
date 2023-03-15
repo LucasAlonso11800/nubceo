@@ -41,7 +41,7 @@ async function createEpisode(
     if (!director) throw new Error("Director not found");
 
     // Add episode to db
-    const newEpisode = { title, tvShowId, season, length, date, directorId };
+    const newEpisode = { title, tvShow: tvShowId, season, length, date, director: directorId };
     await Episode.insertMany([newEpisode]);
   } catch (err) {
     console.error(err);
