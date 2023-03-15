@@ -3,6 +3,8 @@ const cors = require("cors");
 const mongoose = require('mongoose');
 require('dotenv').config();
 
+const episodesRoute = require('./routes/episodes');
+
 const app = express();
 app.use(cors());
 app.use(express.json())
@@ -15,19 +17,18 @@ mongoose.connect(MONGO_URI, {
     useUnifiedTopology: true
 })
 .then(() => console.log('Connected to mongo'))
-.catch(() => console.log('Error connecting to mongo'));
+.catch((err) => console.log('Error connecting to mongo'));
+
+app.get("/ping", (req, res) => {
+  return res.send("Pong")
+});
 
 app.get("/movie", (req, res) => {
 
 });
 
-app.get("/episode/:id", (req, res) => {
-  const { id } = req.params;
-});
-
-app.post("/episode", (req, res) => {
-  const { name } = req.body;
-});
+// Routes
+app.use('/episode', episodesRoute);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

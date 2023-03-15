@@ -1,8 +1,16 @@
-import { model, Schema } from 'mongoose';
+const { model, Schema } = require('mongoose')
 
 const DirectorSchema = new Schema({
     firstName: {
         type: String,
+        required: true
+    },
+    lastName: {
+        type: String,
+        required: true
+    },
+    birthDate: {
+        type: Date,
         required: true
     }
 });
