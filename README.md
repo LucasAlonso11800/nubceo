@@ -14,55 +14,55 @@ Proyect will run on http://localhost:5000
 ### Movie
 
 {
-    "\_id": ObjectId
-    "title": string
-    "genre": string
-    "director": ObjectId
-    "actors": Actor[]
+    "\_id": ObjectId,
+    "title": string,
+    "genre": string,
+    "director": ObjectId, // One director - Many movies
+    "actors": Actor[], // Many to many
     "year": string
 }
 
 ### TVShow
 
 {
-    "\_id": ObjectId
-    "title": string
-    "genre": string
-    "director": ObjectId
-    "actors": Actor[]
-    "year": string
+    "\_id": ObjectId,
+    "title": string,
+    "genre": string,
+    "director": ObjectId, // One director - Many shows
+    "actors": Actor[], // Many to Many
+    "year": string,
     "seasons": number
 }
 
 ### Episode
 
 {
-    "\_id": ObjectId
-    "title": string
-    "tvShow": ObjectId
-    "director": ObjectId
-    "actors": Actor[]
-    "season": number
-    "length": string (MM:SS)
+    "\_id": ObjectId,
+    "title": string,
+    "tvShow": ObjectId, // One show - Many episodes
+    "director": ObjectId, // One director - Many episodes
+    "actors": Actor[], // Many to many
+    "season": number,
+    "length": string (MM:SS),
     "date": date
 }
 
 ### Actor
 
 {
-    "\_id": ObjectId
-    "firstName": string
-    "lastName": string
-    "birthDate": date
+    "\_id": ObjectId,
+    "firstName": string,
+    "lastName": string,
+    "birthDate": date,
     "gender": string
 }
 
 ### Director
 
 {
-    "\_id": ObjectId
-    "firstName": string
-    "lastName": string
+    "\_id": ObjectId,
+    "firstName": string,
+    "lastName": string,
     "birthDate": date
 },
 
