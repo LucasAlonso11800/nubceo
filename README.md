@@ -126,33 +126,33 @@ http://localhost:5000/movie?genre=Comedy&title=Wolf&actors=6411f8fb5adba37e1752c
   }[]
 
 - Example
-  [{
-    "\_id": "6411f5a25adba37e1752c0a8",
-    "title": "The Wolf of Wall Street",
-    "genre": "Comedy",
-    "director": {
-        "\_id": "6411f61a5adba37e1752c0a9",
-        "firstName": "Martin",
-        "lastName": "Scorsese",
-        "birthDate": "1942-11-17T00:00:00.000Z"
-    },
-    "actors": [
-        {
-            "_id": "6411f9385adba37e1752c0ab",
-            "firstName": "Margot",
-            "lastName": "Robbie",
-            "birthDate": "1990-07-02T00:00:00.000Z",
-            "gender": "F"
-        },
-        {
-            "_id": "6411f8fb5adba37e1752c0aa",
-            "firstName": "Leonardo",
-            "lastName": "Di Caprio",
-            "birthDate": "1974-11-11T00:00:00.000Z",
-            "gender": "M"
-        }
-    ],
-    "year": "2014"
+  [{  
+    "\_id": "6411f5a25adba37e1752c0a8",  
+    "title": "The Wolf of Wall Street",  
+    "genre": "Comedy",  
+    "director": {  
+        "\_id": "6411f61a5adba37e1752c0a9",  
+        "firstName": "Martin",  
+        "lastName": "Scorsese",  
+        "birthDate": "1942-11-17T00:00:00.000Z"  
+    },  
+    "actors": [  
+        {  
+            "_id": "6411f9385adba37e1752c0ab",  
+            "firstName": "Margot",  
+            "lastName": "Robbie",  
+            "birthDate": "1990-07-02T00:00:00.000Z",  
+            "gender": "F"  
+        },  
+        {  
+            "_id": "6411f8fb5adba37e1752c0aa",  
+            "firstName": "Leonardo",  
+            "lastName": "Di Caprio",  
+            "birthDate": "1974-11-11T00:00:00.000Z",  
+            "gender": "M"  
+        }  
+    ],  
+    "year": "2014"  
 }]
 
 ## Episodes
@@ -164,33 +164,33 @@ http://localhost:5000/movie?genre=Comedy&title=Wolf&actors=6411f8fb5adba37e1752c
 }
 - Request example: http://localhost:5000/episode/6411dc2cecec3371d9f7f533
 - Response: {
-    "_id": ObjectId
-    "title": string
-    "season": number
-    "length": string (MM:SS)
-    "date": date
-    "_v": number
-    "director": Director
-    "tvShow": TVShow
+    "_id": ObjectId  
+    "title": string  
+    "season": number  
+    "length": string (MM:SS)  
+    "date": date  
+    "_v": number  
+    "director": Director  
+    "tvShow": TVShow  
 }
 - Example: {
-    "_id": "6411dc2cecec3371d9f7f533",
-    "title": "Winter is Coming",
-    "season": 1,
-    "length": "45:00",
-    "date": "2012-08-01T00:00:00.000Z",
-    "__v": 0,
+    "_id": "6411dc2cecec3371d9f7f533",  
+    "title": "Winter is Coming",  
+    "season": 1,  
+    "length": "45:00",  
+    "date": "2012-08-01T00:00:00.000Z",  
+    "__v": 0,  
     "director": {
-        "_id": "6411dbe95adba37e1752c0a5",
-        "firstName": "Guillermo",
-        "lastName": "Del Toro",
-        "birthDate": "1964-10-09T00:00:00.000Z"
+        "_id": "6411dbe95adba37e1752c0a5",  
+        "firstName": "Guillermo",  
+        "lastName": "Del Toro",  
+        "birthDate": "1964-10-09T00:00:00.000Z"  
     },
-    "tvShow": {
-        "actors": [],
-        "_id": "6411d1815adba37e1752c0a4",
-        "title": "Game of Thrones"
-    }
+    "tvShow": {  
+        "actors": [],  
+        "_id": "6411d1815adba37e1752c0a4",  
+        "title": "Game of Thrones"  
+    }  
 }
 
 ### POST /episode
@@ -199,20 +199,20 @@ http://localhost:5000/movie?genre=Comedy&title=Wolf&actors=6411f8fb5adba37e1752c
     "authorization": "Bearer accessToken"
 }
 - Request: {
-    "title": string
-    "tvShowId": string
-    "season": number
-    "length": string
-    "date": string (YYYY-MM-DD)
+    "title": string  
+    "tvShowId": string  
+    "season": number  
+    "length": string  
+    "date": string (YYYY-MM-DD)  
     "directorId": string   
 }
-- Example {
-    "title": "Blackwater",
-    "tvShowId": "6411d1815adba37e1752c0a4",
-    "season": 2,
-    "length": "50:12",
-    "date": "2014-09-10",
-    "directorId": "6411f3c45adba37e1752c0a7"
+- Example {  
+    "title": "Blackwater",  
+    "tvShowId": "6411d1815adba37e1752c0a4",  
+    "season": 2,  
+    "length": "50:12",  
+    "date": "2014-09-10",  
+    "directorId": "6411f3c45adba37e1752c0a7"  
 }
 
 ## Error response
