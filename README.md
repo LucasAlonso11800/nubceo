@@ -3,10 +3,10 @@ Install dependencies with "npm install" on terminal
 On terminal run "npm run start"
 Proyect will run on http://localhost:5000
 
-The proyect needs a .env file on the root folder with the following properties
-MONGO_URI: Database URI
-REFRESH_TOKEN_SECRET: Secret for generating and validating refresh jwt token
-ACCESS_TOKEN_SECRET: Secret for generating and validating access jwt token
+- The proyect needs a .env file on the root folder with the following properties
+- MONGO_URI: Database URI
+- REFRESH_TOKEN_SECRET: Secret for generating and validating refresh jwt token
+- ACCESS_TOKEN_SECRET: Secret for generating and validating access jwt token
 ------------------------------
 
 ## Entities
